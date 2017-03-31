@@ -157,22 +157,30 @@
 										</div>
 									</div>
 									
+									<div class="col-sm-3">
+										<div class="form-group">
+											<label>Fixed Setup</label>
+											<input class="form-control" ng-model="newEntry.FIXED_SETUP"/>
+										</div>
+									</div>
+									
+								</div>
+											
+								<div class="row">
 									<div class="col-sm-1">
 										<label>Random Skin</label>
 										<div class="checkbox top30">
 											<label>
-												<toggle-switch class="switch-large" ng-model="random"></toggle-switch>
+												<input type="checkbox" bs-switch switch-size="mini" ng-model="random"/>
 											</label>
 										</div>
 									</div>
-								</div>
-											
-								<div class="row">
+									
 									<div class="col-sm-4">
 										<label>Spectator</label>
 										<div class="checkbox">
 											<label>
-												<toggle-switch class="switch-large" ng-model="newEntry.SPECTATOR_MODE"></toggle-switch>
+												<input type="checkbox" bs-switch switch-size="mini" ng-model="newEntry.SPECTATOR_MODE"/>
 											</label>
 										</div>
 									</div>
@@ -198,6 +206,7 @@
 														<th>Skin</th>
 														<th>Spectator</th>
 														<th>Ballast</th>
+														<th>Fixed Setup</th>
 														<th></th>
 													</tr>
 												</thead>
@@ -212,13 +221,14 @@
 														<td>{{entry.SKIN}}</td>
 														<td>{{entry.SPECTATOR_MODE ? 'Yes' : 'No'}}</td>
 														<td>{{entry.BALLAST}}</td>
+														<td>{{entry.FIXED_SETUP}}</td>
 														<td><a title="Remove" href="javascript:void(0);" ng-click="removeEntry($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span><a/></td>
 													</tr>
 												</tbody>
 												
 												<tfoot>
 													<tr>
-														<td colspan="9" style="text-align: right;">
+														<td colspan="10" style="text-align: right;">
 															<button type="button" class="btn btn-danger btn-sm" ng-click="clear()">Clear</button>
 														</td>
 													</tr>
